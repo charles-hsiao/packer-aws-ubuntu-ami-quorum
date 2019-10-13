@@ -72,13 +72,6 @@ rm -f ${QUORUM_OUTPUT_FILE}
 echo "Installing Porosity"
 sudo chmod 0755 ${POROSITY_OUTPUT_FILE}
 
-# copy examples
-git clone https://github.com/jpmorganchase/quorum-examples.git
-
-#cp -r /ubuntu/examples /home/ubuntu/quorum-examples
-#chown -R ubuntu:ubuntu /home/ubuntu/quorum-examples
-
-# from source script
-#cp /ubuntu/go-source.sh /home/ubuntu/go-source.sh
-#chown ubuntu:ubuntu /home/ubuntu/go-source.sh
+# copy experiment script
+git clone https://github.com/charles-hsiao/packer-aws-ubuntu-ami-quorum.git
 
