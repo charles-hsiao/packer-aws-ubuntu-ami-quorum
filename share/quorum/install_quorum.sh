@@ -73,5 +73,5 @@ echo "Installing Porosity"
 sudo chmod 0755 ${POROSITY_OUTPUT_FILE}
 
 # copy experiment script
-git clone https://github.com/charles-hsiao/packer-aws-ubuntu-ami-quorum.git
+git clone https://github.com/charles-hsiao/quorum-experiment.git
 
