@@ -39,17 +39,17 @@
     {
       "type": "file",
       "source": "./share/common/monit/etc/monitrc",
-      "destination": "/etc/monitrc"
+      "destination": "/tmp/etc_monitrc"
     },
     {
       "type": "file",
       "source": "./share/common/monit/etc/default/monit",
-      "destination": "/etc/default/monit"
+      "destination": "/tmp/etc_default_monit"
     },
     {
       "type": "file",
       "source": "./share/common/monit/etc/init.d/monit",
-      "destination": "/etc/init.d/monit"
+      "destination": "/tmp/etc_init.d_monit"
     },
     {
       "type": "shell",
