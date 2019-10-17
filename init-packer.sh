@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # AWS Profile
-AWS_PROFILE="private"
+AWS_PROFILE="quorum"
 
 # Search AMI's AWS Owner
 AWS_OWNER=$1

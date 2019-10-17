@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # AWS Profile
-AWS_PROFILE="private"
+AWS_PROFILE="quorum"
 
 # AWS region:
 AWS_REGION=$1
