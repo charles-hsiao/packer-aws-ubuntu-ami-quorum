@@ -39,30 +39,30 @@
     {
       "type": "file",
       "source": "./share/common/monit/etc/monitrc",
-      "destination": "/tmp/etc_monitrc"
+      "destination": "/tmp/monit/etc__monitrc"
     },
     {
       "type": "file",
       "source": "./share/common/monit/etc/default/monit",
-      "destination": "/tmp/etc_default_monit"
+      "destination": "/tmp/monit/etc__default__monit"
     },
     {
       "type": "file",
       "source": "./share/common/monit/etc/init.d/monit",
-      "destination": "/tmp/etc_init.d_monit"
+      "destination": "/tmp/monit/etc__init.d__monit"
     },
     {
       "type": "shell",
       "scripts": [
         "./share/common/apt-get-update.sh",
         "./share/common/install_ntp.sh",
+        "./share/common/install_awscli.sh",
         "./share/common/monit/install_monit.sh"
       ]
     },
     {
       "type": "shell",
       "scripts": [
-        "./share/common/install_awscli.sh",
         "./share/quorum-ct/install_ansible.sh",
         "./share/quorum-ct/setup_ct.sh"
       ]
