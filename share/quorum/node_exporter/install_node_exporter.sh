@@ -3,7 +3,7 @@
 EXPORTER_VERSION=0.18.1
 
 # clone node_exportor
-wget https://github.com/prometheus/node_exporter/releases/download/v$EXPORTER_VERSION/node_exporter-v$EXPORTER_VERSION.linux-amd64.tar.gz
+wget https://github.com/prometheus/node_exporter/releases/download/v$EXPORTER_VERSION/node_exporter-$EXPORTER_VERSION.linux-amd64.tar.gz
 
 # unzip
 tar -xvzf node_exporter-$EXPORTER_VERSION.linux-amd64.tar.gz
