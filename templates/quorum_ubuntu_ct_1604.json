@@ -66,6 +66,17 @@
       ]
     },
     {
+      "type": "file",
+      "source": "./share/quorum-ct/prometheus/etc/init.d/prometheus",
+      "destination": "/tmp/prometheus__etc__init.d__prometheus"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/quorum-ct/prometheus/install_prometheus.sh"
+      ]
+    },
+    {
       "type": "shell",
       "scripts": [
         "./share/quorum-ct/install_ansible.sh",
