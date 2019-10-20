@@ -37,10 +37,26 @@
   }],
   "provisioners": [
     {
+      "type": "file",
+      "source": "./share/common/monit/etc/monitrc",
+      "destination": "/tmp/etc_monitrc"
+    },
+    {
+      "type": "file",
+      "source": "./share/common/monit/etc/default/monit",
+      "destination": "/tmp/etc_default_monit"
+    },
+    {
+      "type": "file",
+      "source": "./share/common/monit/etc/init.d/monit",
+      "destination": "/tmp/etc_init.d_monit"
+    },
+    {
       "type": "shell",
       "scripts": [
         "./share/common/apt-get-update.sh",
-        "./share/common/install_ntp.sh"
+        "./share/common/install_ntp.sh",
+        "./share/common/monit/install_monit.sh"
       ]
     },
     {
