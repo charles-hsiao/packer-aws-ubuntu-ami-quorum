@@ -10,7 +10,7 @@ tar -vxzf monit-$M_VERSION-linux-x64.tar.gz
 sudo cp -f monit-$M_VERSION/bin/monit /usr/bin/monit
 sudo chmod 755 /usr/bin/monit
 
-# create config file
+# create config file path
 sudo mkdir -p /etc/monit/conf.d
 sudo mkdir -p /etc/default
 
