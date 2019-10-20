@@ -68,17 +68,17 @@
     {
       "type": "file",
       "source": "./share/quorum/node_exporter/etc/default/node_exporter",
-      "destination": "/tmp/node_exporter_etc__default__node_exporter"
+      "destination": "/tmp/node_exporter__etc__default__node_exporter"
     },
     {
       "type": "file",
       "source": "./share/quorum/node_exporter/etc/init.d/node_exporter",
-      "destination": "/tmp/node_exporter_etc__init.d__node_exporter"
+      "destination": "/tmp/node_exporter__etc__init.d__node_exporter"
     },
     {
       "type": "file",
       "source": "./share/quorum/node_exporter/etc/monit/conf.d/node_exporter",
-      "destination": "/tmp/node_exporter_etc__monit__conf.d__node_exporter"
+      "destination": "/tmp/node_exporter__etc__monit__conf.d__node_exporter"
     },
     {
       "type": "shell",
