@@ -14,9 +14,13 @@ tar -xvzf prometheus-$P_VERSION.linux-amd64.tar.gz
 # create & copy files
 sudo mkdir -p ~/prometheus
 sudo mv ~/prometheus-$P_VERSION.linux-amd64/* ~/prometheus/
+sudo cp /tmp/prometheus__etc__init.d__prometheus /etc/init.d/prometheus
 
 # update init config permission
 sudo chmod 755 /etc/init.d/prometheus
+
+# setup monit
+sudo cp /tmp/prometheus__etc__monit__conf.d__prometheus /etc/monit/conf.d/prometheus
 
 # clean-up
 rm -f ~/prometheus-2.13.0.linux-amd64.tar.gz

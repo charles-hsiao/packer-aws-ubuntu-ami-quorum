@@ -1,0 +1,4 @@
+check process prometheus with pidfile /var/run/prometheus/prometheus.pid every 5 cycles
+  start program = "/bin/su -c '/etc/init.d/prometheus start'"
+  stop program = "/bin/su -c '/etc/init.d/prometheus stop'"
+  if does not exist then restart
