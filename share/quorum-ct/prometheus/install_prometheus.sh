@@ -10,7 +10,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v$P_VERSION/prom
 tar -xvzf prometheus-$P_VERSION.linux-amd64.tar.gz
 
 # Prometheus data store
-mkdir -p /home/$USER/data
+mkdir -p /home/$USER/prometheus/data
 
 # create & copy files
 sudo mkdir -p ~/prometheus
