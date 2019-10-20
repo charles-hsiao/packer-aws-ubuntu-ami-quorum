@@ -15,9 +15,9 @@ sudo mkdir -p /etc/monit/conf.d
 sudo mkdir -p /etc/default
 
 # copy files
-sudo cp /tmp/monit/etc_monitrc /etc/monitrc
-sudo cp /tmp/monit/etc__default__monit /etc/default/monit
-sudo cp /tmp/monit/etc__init.d__monit /etc/init.d/monit
+sudo cp /tmp/monit__etc__monitrc /etc/monitrc
+sudo cp /tmp/monit__etc__default__monit /etc/default/monit
+sudo cp /tmp/monit__etc__init.d__monit /etc/init.d/monit
 
 # update default value permission
 sudo chmod 644 /etc/default/monit
@@ -28,13 +28,13 @@ sudo chmod 755 /etc/init.d/monit
 # update monit config permission
 sudo chmod 600 /etc/monitrc
 
-# enable monit service
-sudo systemctl enable monit.service
-
 # clean-up 
 rm -r monit-$M_VERSION-linux-x64.tar.gz
 rm -rf monit-$M_VERSION
-rm -rf /tmp/monit
+rm -rf /tmp/monit*
+
+# enable monit service
+sudo systemctl enable monit.service
 
 # start monit service
 sudo service monit start
