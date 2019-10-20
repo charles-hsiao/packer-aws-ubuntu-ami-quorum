@@ -1,0 +1,4 @@
+check process node_exporter with pidfile /var/run/prometheus/node_exporter.pid every 5 cycles
+  start program = "/bin/su -c '/etc/init.d/node_exporter start'"
+  stop program = "/bin/su -c '/etc/init.d/node_exporter stop'"
+  if does not exist then restart
