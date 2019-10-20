@@ -16,8 +16,8 @@ sudo mkdir -p /etc/default
 
 # copy files
 sudo cp /tmp/etc_monitrc /etc/monitrc
-sudo cp /tmp/etc_default_monit /etc/default/monit
-sudo cp /tmp/etc_init.d_monit /etc/init.d/monit
+sudo cp /tmp/etc__default__monit /etc/default/monit
+sudo cp /tmp/etc__init.d__monit /etc/init.d/monit
 
 # update default value permission
 sudo chmod 644 /etc/default/monit
