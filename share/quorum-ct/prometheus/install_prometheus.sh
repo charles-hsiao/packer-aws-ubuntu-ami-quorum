@@ -1,6 +1,7 @@
 #!/bin/bash
 
 P_VERSION=2.13.0
+USER="ubuntu"
 
 # clone Prometheus
 wget https://github.com/prometheus/prometheus/releases/download/v$P_VERSION/prometheus-$P_VERSION.linux-amd64.tar.gz
@@ -9,7 +10,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v$P_VERSION/prom
 tar -xvzf prometheus-$P_VERSION.linux-amd64.tar.gz
 
 # Prometheus data store
-# mkdir -p data
+mkdir -p /home/$USER/data
 
 # create & copy files
 sudo mkdir -p ~/prometheus

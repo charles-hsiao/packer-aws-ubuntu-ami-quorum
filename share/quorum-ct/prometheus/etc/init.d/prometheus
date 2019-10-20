@@ -15,7 +15,7 @@ DAEMON=$WORKING_DIR/prometheus
 PIDFILE=/var/run/prometheus/$NAME.pid
 LOGFILE=/var/log/prometheus/$NAME.log
 
-ARGS=""
+ARGS="--config.file $WORKING_DIR/prometheus.yml --storage.tsdb.path="$WORKING_DIR/data/""
 
 do_start_prepare() 
 { 
