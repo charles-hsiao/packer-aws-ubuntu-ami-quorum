@@ -3,7 +3,7 @@
 EXPORTER_VERSION=0.18.1
 
 # clone node_exportor
-wget https://github.com/prometheus/node_exporter/releases/download/v$EXPORTER_VERSION/node_exporter-v$EXPORTER_VERSION.linux-amd64.tar.gz
+wget https://github.com/prometheus/node_exporter/releases/download/v$EXPORTER_VERSION/node_exporter-$EXPORTER_VERSION.linux-amd64.tar.gz
 
 # unzip
 tar -xvzf node_exporter-$EXPORTER_VERSION.linux-amd64.tar.gz
@@ -23,6 +23,9 @@ sudo chmod 644 /etc/default/node_exporter
 
 # update init config permission
 sudo chmod 755 /etc/init.d/node_exporter
+
+# setup monit
+sudo cp /tmp/node_exporter__etc__monit__conf.d__node_exporter /etc/monit/conf.d/node_exporter
 
 # clean-up
 rm -f node_exporter-0.18.1.linux-amd64.tar.gz
