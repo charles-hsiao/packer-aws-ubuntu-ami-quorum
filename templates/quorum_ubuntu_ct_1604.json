@@ -82,9 +82,14 @@
       ]
     },
     {
+      "type": "file",
+      "source": "./share/quorum-ct/grafana/etc/monit/conf.d/grafana-server",
+      "destination": "/tmp/grafana__etc__monit__conf.d__grafana-server"
+    },
+    {
       "type": "shell",
       "scripts": [
-        "./share/quorum-ct/grafana-server/install_grafana_server.sh"
+        "./share/quorum-ct/grafana/install_grafana_server.sh"
       ]
     },
     {
