@@ -16,6 +16,9 @@ sudo apt-get update
 # apt install grafana
 sudo apt-get install -y grafana
 
+# install plugin
+sudo grafana-cli plugins install grafana-piechart-panel
+
 # setup monit
 sudo cp /tmp/grafana__etc__monit__conf.d__grafana-server /etc/monit/conf.d/grafana-server
 
