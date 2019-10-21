@@ -1,4 +1,4 @@
-check process grafana-server with pidfile /var/run/grafana/grafana-server.pid every 5 cycles
+check process grafana-server matching "/usr/sbin/grafana*" every 5 cycles
   start program = "/bin/su -c 'service grafana-server start'"
   stop program = "/bin/su -c 'service grafana-server stop'"
   if does not exist then restart
