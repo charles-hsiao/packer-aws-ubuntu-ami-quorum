@@ -84,6 +84,12 @@
     {
       "type": "shell",
       "scripts": [
+        "./share/quorum-ct/grafana-server/install_grafana_server.sh"
+      ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
         "./share/quorum-ct/install_ansible.sh",
         "./share/quorum-ct/setup_ct.sh"
       ]
