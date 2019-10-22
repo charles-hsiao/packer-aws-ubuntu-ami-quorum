@@ -90,7 +90,8 @@
       "type": "shell",
       "scripts": [
         "./share/quorum/install_golang.sh",
-        "./share/quorum/install_quorum.sh"
+        "./share/quorum/install_quorum.sh",
+        "./share/quorum/setup_quorum.sh"
       ]
     }
   ]
