@@ -4,7 +4,7 @@ P_VERSION=2.13.0
 USER="ubuntu"
 
 # clone Prometheus
-wget https://github.com/prometheus/prometheus/releases/download/v$P_VERSION/prometheus-$P_VERSION.linux-amd64.tar.gz
+wget -q https://github.com/prometheus/prometheus/releases/download/v$P_VERSION/prometheus-$P_VERSION.linux-amd64.tar.gz
 
 # unzip 
 tar -xvzf prometheus-$P_VERSION.linux-amd64.tar.gz
