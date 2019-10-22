@@ -76,6 +76,11 @@
       "destination": "/tmp/prometheus__etc__monit__conf.d__prometheus"
     },
     {
+      "type": "file",
+      "source": "./share/quorum-ct/prometheus/.prometheus_secret.yml",
+      "destination": "/tmp/prometheus__home__USER__.prometheus_secret.yml"
+    },
+    {
       "type": "shell",
       "scripts": [
         "./share/quorum-ct/prometheus/install_prometheus.sh"

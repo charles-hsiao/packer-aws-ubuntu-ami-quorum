@@ -16,6 +16,7 @@ mkdir -p /home/$USER/prometheus/data
 sudo mkdir -p ~/prometheus
 sudo mv ~/prometheus-$P_VERSION.linux-amd64/* ~/prometheus/
 sudo cp /tmp/prometheus__etc__init.d__prometheus /etc/init.d/prometheus
+sudo cp /tmp/prometheus__home__USER__.prometheus_secret.yml /home/$USER/.prometheus_secret.yml
 
 # update init config permission
 sudo chmod 755 /etc/init.d/prometheus
