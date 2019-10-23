@@ -98,9 +98,24 @@
       ]
     },
     {
+      "type": "file",
+      "source": "./share/quorum-ct/ansible/etc/ansible/ansible.cfg",
+      "destination": "/tmp/ansible__etc__ansible__ansible.cfg"
+    },
+    {
+      "type": "file",
+      "source": "./share/quorum-ct/ansible/ansible_aws_credential",
+      "destination": "/tmp/ansible_aws_credential"
+    },
+    {
       "type": "shell",
       "scripts": [
-        "./share/quorum-ct/install_ansible.sh",
+        "./share/quorum-ct/ansible/install_ansible.sh"
+      ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
         "./share/quorum-ct/setup_ct.sh"
       ]
     },
