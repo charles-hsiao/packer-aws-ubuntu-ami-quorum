@@ -13,6 +13,7 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 
 # install ansible
 sudo apt-get install -y ansible
+sudo pip install boto3
 
 # replace ansible config 
 sudo rm -r /etc/ansible/ansible.cfg
