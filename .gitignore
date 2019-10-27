@@ -1,2 +1,3 @@
 .prometheus_secret.yml
 ansible_aws_credential
+*.swp
