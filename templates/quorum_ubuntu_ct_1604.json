@@ -88,6 +88,11 @@
     },
     {
       "type": "file",
+      "source": "./share/quorum-ct/grafana/etc/grafana/grafana.ini",
+      "destination": "/tmp/grafana__etc__grafana__grafana.ini"
+    },
+    {
+      "type": "file",
       "source": "./share/quorum-ct/grafana/etc/monit/conf.d/grafana-server",
       "destination": "/tmp/grafana__etc__monit__conf.d__grafana-server"
     },
