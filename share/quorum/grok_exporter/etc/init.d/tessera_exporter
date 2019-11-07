@@ -10,11 +10,11 @@
 
 NAME=tessera_exporter
 USER=ubuntu
-DAEMON=/home/$USER/grok_exporter/tessera_exporter
+DAEMON=/home/$USER/grok_exporter/grok_exporter
 PIDFILE=/var/run/prometheus/$NAME.pid
 LOGFILE=/var/log/prometheus/$NAME.log
 
-ARGS="-config tessera_exporter.yml"
+ARGS="-config /home/$USER/grok_exporter/tessera_exporter.yml"
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
 do_start_prepare()

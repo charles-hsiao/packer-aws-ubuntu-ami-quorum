@@ -6,7 +6,7 @@ input:
     readall: true
     fail_on_missing_logfile: false
 grok:
-    patterns_dir: ./patterns
+    patterns_dir: /home/ubuntu/grok_exporter/patterns
 metrics:
     - type: counter
       name: tessera_send_private_transactions
