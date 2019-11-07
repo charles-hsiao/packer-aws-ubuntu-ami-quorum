@@ -93,6 +93,27 @@
       ]
     },
     {
+      "type": "file",
+      "source": "./share/quorum/grok_exporter/grok_exporter-0.2.8.linux-amd64.zip",
+      "destination": "/tmp/grok_exporter-0.2.8.linux-amd64.zip"
+    },
+    {
+      "type": "file",
+      "source": "./share/quorum/grok_exporter/etc/init.d/grok_exporter",
+      "destination": "/tmp/grok_exporter__etc__init.d__grok_exporter"
+    },
+    {
+      "type": "file",
+      "source": "./share/quorum/grok_exporter/etc/monit/conf.d/grok_exporter",
+      "destination": "/tmp/grok_exporter__etc__monit__conf.d__grok_exporter"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/quorum/grok_exporter/install_grok_exporter.sh"
+      ]
+    },
+    {
       "type": "shell",
       "scripts": [
         "./share/quorum/install_golang.sh",
