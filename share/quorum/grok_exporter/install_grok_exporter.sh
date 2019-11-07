@@ -4,6 +4,7 @@
 sudo cp /tmp/grok_exporter-0.2.8.linux-amd64.zip /home/ubuntu/grok_exporter-0.2.8.linux-amd64.zip
 
 # unzip
+sudo apt-get install -y zip
 unzip /home/ubuntu/grok_exporter-0.2.8.linux-amd64.zip
 
 # rename folder
