@@ -109,7 +109,7 @@
     },
     {
       "type": "file",
-      "source": "./share/quorum/grok_exporter/home/USER/grok_exporter/grok_exporter.yml",
+      "source": "./share/quorum/grok_exporter/home/USER/grok_exporter/tessera_exporter.yml",
       "destination": "/tmp/grok_exporter__home__USER__grok_exporter__tessera_exporter.yml"
     },
     {
