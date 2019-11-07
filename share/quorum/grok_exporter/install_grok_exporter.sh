@@ -7,7 +7,7 @@ sudo cp /tmp/grok_exporter-0.2.8.linux-amd64.zip /home/ubuntu/grok_exporter-0.2.
 unzip /home/ubuntu/grok_exporter-0.2.8.linux-amd64.zip
 
 # rename folder
-mv grok_exporter-0.2.8.linux-amd64.zip grok_exporter
+mv grok_exporter-0.2.8.linux-amd64 grok_exporter
 
 # create & copy files
 sudo cp /tmp/grok_exporter__etc__init.d__tessera_exporter /etc/init.d/tessera_exporter
@@ -21,3 +21,4 @@ sudo cp /tmp/grok_exporter__etc__monit__conf.d__grok_exporter /etc/monit/conf.d/
 
 # clean-up
 rm -rf /tmp/grok_exporter*
+rm -f /home/ubuntu/grok_exporter-0.2.8.linux-amd64.zip
