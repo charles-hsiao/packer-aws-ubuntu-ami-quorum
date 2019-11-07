@@ -1,4 +1,4 @@
-check process grok_exporter with pidfile /var/run/prometheus/grok_exporter.pid every 5 cycles
-  start program = "/bin/su -c '/etc/init.d/grok_exporter start'"
-  stop program = "/bin/su -c '/etc/init.d/grok_exporter stop'"
+check process tessera_exporter with pidfile /var/run/prometheus/tessera_exporter.pid every 5 cycles
+  start program = "/bin/su -c '/etc/init.d/tessera_exporter start'"
+  stop program = "/bin/su -c '/etc/init.d/tessera_exporter stop'"
   if does not exist then restart

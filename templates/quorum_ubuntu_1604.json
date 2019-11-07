@@ -99,13 +99,18 @@
     },
     {
       "type": "file",
-      "source": "./share/quorum/grok_exporter/etc/init.d/grok_exporter",
-      "destination": "/tmp/grok_exporter__etc__init.d__grok_exporter"
+      "source": "./share/quorum/grok_exporter/etc/init.d/tessera_exporter",
+      "destination": "/tmp/grok_exporter__etc__init.d__tessera_exporter"
     },
     {
       "type": "file",
       "source": "./share/quorum/grok_exporter/etc/monit/conf.d/grok_exporter",
       "destination": "/tmp/grok_exporter__etc__monit__conf.d__grok_exporter"
+    },
+    {
+      "type": "file",
+      "source": "./share/quorum/grok_exporter/home/USER/grok_exporter/grok_exporter.yml",
+      "destination": "/tmp/grok_exporter__home__USER__grok_exporter__tessera_exporter.yml"
     },
     {
       "type": "shell",

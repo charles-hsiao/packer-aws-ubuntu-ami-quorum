@@ -1,0 +1,32 @@
+global:
+    config_version: 2
+input:
+    type: file
+    path: /home/ubuntu/quorum-experiment/nodes/qdata/logs/tessera.log
+    readall: true
+    fail_on_missing_logfile: false
+grok:
+    patterns_dir: ./patterns
+metrics:
+    - type: counter
+      name: tessera_send_private_transactions
+      help: The count of Tessera send private transactions
+      match: '%{TIMESTAMP_ISO8601} \[%{GREEDYDATA}\] %{LOGLEVEL}  %{GREEDYDATA} - Enter Request : POST : /sendraw'
+    - type: counter
+      name: tessera_sent_private_transactions
+      help: The count of Tessera sent private transactions
+      match: '%{TIMESTAMP_ISO8601} \[%{GREEDYDATA}\] %{LOGLEVEL}  %{GREEDYDATA} - Response for sendraw : 200 OK'
+    - type: counter
+      name: tessera_receive_private_transactions
+      help: The count of Tessera received private transactions
+      match: '%{TIMESTAMP_ISO8601} \[%{GREEDYDATA}\] %{LOGLEVEL}  %{GREEDYDATA} - Enter Request : GET : /receiveraw'
+    - type: counter
+      name: tessera_decrypted_private_transactions
+      help: The count of Tessera decrypted private transactions successfully
+      match: '%{TIMESTAMP_ISO8601} \[%{GREEDYDATA}\] %{LOGLEVEL}  %{GREEDYDATA} - Response for receiveraw : 200 OK'
+    - type: counter
+      name: tessera_decrypt_failed_private_transactions
+      help: The count of Tessera failed to decrypt private transactions
+      match: '%{TIMESTAMP_ISO8601} \[%{GREEDYDATA}\] %{LOGLEVEL}  %{GREEDYDATA} - Response for receiveraw : 404 Not Found'
+server:
+    port: 8001
