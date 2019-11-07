@@ -7,7 +7,7 @@ sudo cp /tmp/grok_exporter-0.2.8.linux-amd64.zip /home/ubuntu/grok_exporter-0.2.
 unzip /home/ubuntu/grok_exporter-0.2.8.linux-amd64.zip
 
 # rename folder
-mv grok_exporter-0.2.8.linux-amd64 grok_exporter
+mv /home/ubuntu/grok_exporter-0.2.8.linux-amd64 /home/ubuntu/grok_exporter
 
 # create & copy files
 sudo cp /tmp/grok_exporter__etc__init.d__tessera_exporter /etc/init.d/tessera_exporter
