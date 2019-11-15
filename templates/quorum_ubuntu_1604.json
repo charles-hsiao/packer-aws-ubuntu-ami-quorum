@@ -120,7 +120,7 @@
     {
       "type": "file",
       "source": "./share/quorum/grok_exporter/home/USER/grok_exporter/constellation_exporter.yml",
-      "destination": "/tmp/grok_exporter__home__USER__grok_exporter__cnstellation_exporter.yml"
+      "destination": "/tmp/grok_exporter__home__USER__grok_exporter__constellation_exporter.yml"
     },
     {
       "type": "shell",
