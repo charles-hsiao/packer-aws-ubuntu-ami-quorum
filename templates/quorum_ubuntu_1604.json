@@ -104,6 +104,11 @@
     },
     {
       "type": "file",
+      "source": "./share/quorum/grok_exporter/etc/init.d/constellation_exporter",
+      "destination": "/tmp/grok_exporter__etc__init.d__constellation_exporter"
+    },
+    {
+      "type": "file",
       "source": "./share/quorum/grok_exporter/etc/monit/conf.d/grok_exporter",
       "destination": "/tmp/grok_exporter__etc__monit__conf.d__grok_exporter"
     },
@@ -111,6 +116,11 @@
       "type": "file",
       "source": "./share/quorum/grok_exporter/home/USER/grok_exporter/tessera_exporter.yml",
       "destination": "/tmp/grok_exporter__home__USER__grok_exporter__tessera_exporter.yml"
+    },
+    {
+      "type": "file",
+      "source": "./share/quorum/grok_exporter/home/USER/grok_exporter/constellation_exporter.yml",
+      "destination": "/tmp/grok_exporter__home__USER__grok_exporter__cnstellation_exporter.yml"
     },
     {
       "type": "shell",

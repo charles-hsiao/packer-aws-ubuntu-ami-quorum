@@ -1,0 +1,28 @@
+global:
+    config_version: 2
+input:
+    type: file
+    path: /home/ubuntu/quorum-experiment/nodes/qdata/logs/constellation.log
+    readall: true
+    fail_on_missing_logfile: false
+grok:
+    patterns_dir: /home/ubuntu/grok_exporter/patterns
+metrics:
+    - type: counter
+      name: constellation_send_private_transactions
+      help: The count of Constellation send private transactions
+      match: '%{TIME} \[%{LOGLEVEL}\] Request from : ApiSendRaw \(Send %{GREEDYDATA}'
+    - type: counter
+      name: constellation_receive_private_transactions
+      help: The count of Constellation received private transactions
+      match: '%{TIME} \[%{LOGLEVEL}\] %{GREEDYDATA}: ApiReceiveRaw \(Receive %{GREEDYDATA}'
+    - type: counter
+      name: constellation_decrypted_private_transactions
+      help: The count of Constellation received private transactions
+      match: '%{TIME} \[%{LOGLEVEL}\] Request from %{GREEDYDATA}: ApiReceiveRaw \(Receive %{GREEDYDATA}'
+    - type: counter
+      name: constellation_decrypt_failed_private_transactions
+      help: The count of Constellation failed to decrypt private transactions
+      match: '%{TIME} \[%{LOGLEVEL}\] Error performing API request: ApiReceiveRaw \(Receive %{GREEDYDATA}'
+server:
+    port: 8002

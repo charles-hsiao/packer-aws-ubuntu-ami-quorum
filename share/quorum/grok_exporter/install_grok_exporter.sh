@@ -12,10 +12,13 @@ mv /home/ubuntu/grok_exporter-0.2.8.linux-amd64 /home/ubuntu/grok_exporter
 
 # create & copy files
 sudo cp /tmp/grok_exporter__etc__init.d__tessera_exporter /etc/init.d/tessera_exporter
+sudo cp /tmp/grok_exporter__etc__init.d__constellation_exporter /etc/init.d/constellation_exporter
 sudo cp /tmp/grok_exporter__home__USER__grok_exporter__tessera_exporter.yml /home/ubuntu/grok_exporter/tessera_exporter.yml
+sudo cp /tmp/grok_exporter__home__USER__grok_exporter__constellation_exporter.yml /home/ubuntu/grok_exporter/constellation_exporter.yml
 
 # update init config permission
 sudo chmod 755 /etc/init.d/tessera_exporter
+sudo chmod 755 /etc/init.d/constellation_exporter
 
 # setup monit
 sudo cp /tmp/grok_exporter__etc__monit__conf.d__grok_exporter /etc/monit/conf.d/grok_exporter
