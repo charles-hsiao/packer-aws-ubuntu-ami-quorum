@@ -2,3 +2,7 @@ check process tessera_exporter with pidfile /var/run/prometheus/tessera_exporter
   start program = "/bin/su -c '/etc/init.d/tessera_exporter start'"
   stop program = "/bin/su -c '/etc/init.d/tessera_exporter stop'"
   if does not exist then restart
+check process constellation_exporter with pidfile /var/run/prometheus/constellation_exporter.pid every 5 cycles
+  start program = "/bin/su -c '/etc/init.d/constellation_exporter start'"
+  stop program = "/bin/su -c '/etc/init.d/constellation_exporter stop'"
+  if does not exist then restart
