@@ -11,7 +11,7 @@ metrics:
     - type: counter
       name: constellation_send_private_transactions
       help: The count of Constellation send private transactions
-      match: '%{TIME} \[%{LOGLEVEL}\] Request from : ApiSendRaw \(Send %{GREEDYDATA}'
+      match: '%{TIME} \[%{LOGLEVEL}\] Request from %{GREEDYDATA}: ApiSendRaw \(Send %{GREEDYDATA}'
     - type: counter
       name: constellation_receive_private_transactions
       help: The count of Constellation received private transactions
