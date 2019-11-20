@@ -104,6 +104,22 @@
     },
     {
       "type": "file",
+      "source": "./share/quorum-ct/epirus/etc/init.d/epirus",
+      "destination": "/tmp/epirus__etc__init.d__epirus"
+    },
+    {
+      "type": "file",
+      "source": "./share/quorum-ct/epirus/etc/monit/conf.d/epirus",
+      "destination": "/tmp/epirus__etc__monit__conf.d__epirus"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/quorum-ct/epirus/install_epirus.sh"
+      ]
+    },
+    {
+      "type": "file",
       "source": "./share/quorum-ct/ansible/etc/ansible/ansible.cfg",
       "destination": "/tmp/ansible__etc__ansible__ansible.cfg"
     },
