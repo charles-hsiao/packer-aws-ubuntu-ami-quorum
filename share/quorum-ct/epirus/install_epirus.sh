@@ -38,8 +38,5 @@ sudo cp /tmp/epirus__etc__init.d__epirus /etc/init.d/epirus
 # update init config permission
 sudo chmod 755 /etc/init.d/epirus
 
-# setup monit
-sudo cp /tmp/epirus__etc__monit__conf.d__epirus /etc/monit/conf.d/epirus
-
 # clean-up
 rm -rf /tmp/epirus*
