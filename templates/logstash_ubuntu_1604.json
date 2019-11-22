@@ -1,0 +1,76 @@
+{
+  "variables": {
+    "AWS_REGION": null,
+    "UPSTREAM_UBUNTU_AMI": null,
+    "UPSTREAM_UBUNTU_RELEASE": null,
+    "UBUNTU_VERSION_SHORT": null,
+    "LATEST_GIT_HASH": null,
+    "role_name": "logstash",
+    "instance_type": "t2.small",
+    "ssh_username": "ubuntu",
+    "distribution": "ubuntu",
+    "device_name": "/dev/sda1"
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "{{user `AWS_REGION`}}",
+    "source_ami": "{{user `UPSTREAM_UBUNTU_AMI`}}",
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "{{user `ssh_username`}}",
+    "ami_name": "{{user `role_name`}}-{{user `distribution`}}-{{user `UBUNTU_VERSION_SHORT`}}-{{user `UPSTREAM_UBUNTU_RELEASE`}}-{{user `LATEST_GIT_HASH`}}-{{timestamp}}",
+    "launch_block_device_mappings":[{
+      "device_name": "{{user `device_name`}}",
+      "delete_on_termination": true,
+      "volume_size": 8,
+      "volume_type": "gp2"
+    }],
+    "tags": {
+      "Name": "{{user `role_name`}}-{{user `distribution`}}-{{user `UBUNTU_VERSION_SHORT`}}-{{user `UPSTREAM_UBUNTU_RELEASE`}}-{{user `LATEST_GIT_HASH`}}-{{timestamp}}",
+      "Distribution": "{{user `distribution`}}",
+      "Version": "{{user `UBUNTU_VERSION_SHORT`}}",
+      "Base_AMI": "{{ .SourceAMI }}",
+      "Base_AMI_Name": "{{ .SourceAMIName }}",
+      "Release": "{{user `UPSTREAM_UBUNTU_RELEASE`}}",
+      "Git_Hash": "{{user `LATEST_GIT_HASH`}}",
+      "BuiltWith": "packer"
+    }
+  }],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/common/apt-get-update.sh",
+        "./share/common/install_ntp.sh",
+        "./share/common/install_awscli.sh"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "./share/common/monit/etc/monitrc",
+      "destination": "/tmp/monit__etc__monitrc"
+    },
+    {
+      "type": "file",
+      "source": "./share/common/monit/etc/default/monit",
+      "destination": "/tmp/monit__etc__default__monit"
+    },
+    {
+      "type": "file",
+      "source": "./share/common/monit/etc/init.d/monit",
+      "destination": "/tmp/monit__etc__init.d__monit"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/common/monit/install_monit.sh"
+      ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/logstash/install_logstash.sh",
+        "./share/logstash/setup_logstash.sh"
+      ]
+    }
+  ]
+}
