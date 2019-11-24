@@ -71,6 +71,11 @@
       "destination": "/tmp/filebeat__lib__systemd__system__filebeat.service"
     },
     {
+      "type": "file",
+      "source": "./share/quorum/filebeat/etc/monit/conf.d/filebeat",
+      "destination": "/tmp/filebeat__etc__monit__conf.d__filebeat"
+    },
+    {
       "type": "shell",
       "scripts": [
         "./share/quorum/filebeat/install_filebeat.sh"

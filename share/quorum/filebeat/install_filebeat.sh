@@ -11,5 +11,12 @@ sudo rm /lib/systemd/system/filebeat.service
 sudo cp /tmp/filebeat__lib__systemd__system__filebeat.service /lib/systemd/system/filebeat.service
 sudo chmod 0644 /lib/systemd/system/filebeat.service
 
+# seup monit
+sudo cp /tmp/filebeat__etc__monit__conf.d__filebeat /etc/monit/conf.d/filebeat
+
+# set-up log path
+sudo mkdir -p /var/log/filebeat
+sudo chown ubuntu:ubuntu /var/log/filebeat
+
 # clean-up
 rm -rf /tmp/filebeat*
