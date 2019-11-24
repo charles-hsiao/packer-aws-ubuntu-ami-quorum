@@ -67,6 +67,17 @@
     },
     {
       "type": "file",
+      "source": "./share/quorum/filebeat/lib/systemd/system/filebeat.service",
+      "destination": "/tmp/filebeat__lib__systemd__system__filebeat.service"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/quorum/filebeat/install_filebeat.sh"
+      ]
+    },
+    {
+      "type": "file",
       "source": "./share/quorum/node_exporter/etc/default/node_exporter",
       "destination": "/tmp/node_exporter__etc__default__node_exporter"
     },
