@@ -1,0 +1,3 @@
+check process filebeat matching "/usr/share/filebeat/bin/filebeat*" every 5 cycles
+  start program = "/bin/su -c 'service filebeat start'"
+  stop program = "/bin/su -c 'service filebeat stop'"
