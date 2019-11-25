@@ -46,6 +46,17 @@
     },
     {
       "type": "file",
+      "source": "./share/quorum-ct/aws/home/USER/.aws/credentials",
+      "destination": "/tmp/aws__home__USER__.aws__credentials"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "./share/quorum-ct/aws/setup_aws.sh"
+      ]
+    },
+    {
+      "type": "file",
       "source": "./share/common/monit/etc/monitrc",
       "destination": "/tmp/monit__etc__monitrc"
     },
