@@ -13,6 +13,7 @@ sudo chmod 0644 /lib/systemd/system/filebeat.service
 
 # seup monit
 sudo cp /tmp/filebeat__etc__monit__conf.d__filebeat /etc/monit/conf.d/filebeat
+sudo monit stop filebeat
 
 # set-up log path
 sudo mkdir -p /var/log/filebeat
