@@ -66,6 +66,11 @@
       ]
     },
     {
+      "type": "file",
+      "source": "./share/logstash/etc/monit/conf.d/logstash",
+      "destination": "/tmp/logstash__etc__monit__conf.d__logstash"
+    },
+    {
       "type": "shell",
       "scripts": [
         "./share/logstash/install_logstash.sh",
