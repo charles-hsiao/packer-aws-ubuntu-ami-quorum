@@ -3,8 +3,8 @@
 # reload monit
 sudo monit reload
 
-# htop installation
-sudo apt-get install -y htop
+# htop installation & jq
+sudo apt-get install -y htop jq
 
 # clone ansible playbooks
 git clone https://github.com/charles-hsiao/quorum-ansible-playbooks.git
