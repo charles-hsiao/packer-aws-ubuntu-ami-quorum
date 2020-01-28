@@ -82,6 +82,12 @@
       ]
     },
     {
+      "type": "shell",
+      "scripts": [
+        "./share/quorum/install_wondershaper.sh"
+      ]
+    },
+    {
       "type": "file",
       "source": "./share/quorum/node_exporter/etc/default/node_exporter",
       "destination": "/tmp/node_exporter__etc__default__node_exporter"
